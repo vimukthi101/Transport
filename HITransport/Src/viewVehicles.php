@@ -36,6 +36,15 @@ if(mysqli_num_rows($result)!=0){
 		$date = $row['insurance_date'];
 		$exp = $row['expiry_date'];
 		$driver = $row['driver_name'];
+		$getDriver = "SELECT * FROM driver WHERE licence_no='".$driver."'";
+		$resultDriver= mysqli_query($con, $getDriver);
+		if(mysqli_num_rows($resultDriver)!=0){
+			while($rowDriver= mysqli_fetch_array($resultDriver)){
+				$dName = $rowDriver['frist_name'].' '.$rowDriver['last_name'];
+			}
+		} else {
+			$dName = $driver;	
+		}
 		$html .= '<tr style="height:30px; padding:4px;">
 				<td><div align="center">'.$vName.'</div></td>
 				<td><div align="center">'.$vNo.'</div></td>
@@ -46,7 +55,7 @@ if(mysqli_num_rows($result)!=0){
 				<td><div align="center">'.$company.'</div></td>
 				<td><div align="center">'.$date.'</div></td>
 				<td><div align="center">'.$exp.'</div></td>
-				<td><div align="center">'.$driver.'</div></td>
+				<td><div align="center">'.$dName.'</div></td>
 			</tr>';	
 	}
 	$pdf->Cell(0, 0, 'HIKH Transport Management System', 1, 1, 'C');

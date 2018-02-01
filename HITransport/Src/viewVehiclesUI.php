@@ -35,7 +35,16 @@ if(mysqli_num_rows($result)!=0){
 		$date = $row['insurance_date'];
 		$exp = $row['expiry_date'];
 		$driver = $row['driver_name'];
-		echo '<div class="col-md-3" style="border:#D22929 solid 2px;padding:10px;">
+		$getDriver = "SELECT * FROM driver WHERE licence_no='".$driver."'";
+		$resultDriver= mysqli_query($con, $getDriver);
+		if(mysqli_num_rows($resultDriver)!=0){
+			while($rowDriver= mysqli_fetch_array($resultDriver)){
+				$dName = $rowDriver['frist_name'].' '.$rowDriver['last_name'];
+			}
+		} else {
+			$dName = $driver;	
+		}
+		echo '<div class="col-md-3" style="border:#D22929 solid 2px;padding:10px;margin:10px;">
 		<div align="center"><img src="data:image/jpeg;base64,'.base64_encode($vImage).'" style="height:150px;width:150px;"></img></div>
 		<div>Vehicle Name : '.$vName.'</div>
 		<div>Vehicle No : '.$vNo.'</div>
@@ -46,7 +55,7 @@ if(mysqli_num_rows($result)!=0){
 		<div>Insurance Company : '.$company.'</div>
 		<div>Insurance Date : '.$date.'</div>
 		<div>Expiry Date : '.$exp.'</div>
-		<div>Driver Name : '.$driver.'</div>
+		<div>Driver Name : '.$dName.'</div>
         </div>';	
 	}
 } else {

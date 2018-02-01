@@ -9,6 +9,14 @@ include_once('../ssi/db.php');
     <tr>
       <th colspan="5" scope="col"><div class="header">Add Driver</div></th>
     </tr>
+    
+    <tr>
+      <td width="11%">&nbsp;</td>
+      <td width="29%">Image </td>
+      <td width="2%">:</td>
+      <td width="38%"><input name="Image" type="file" id="Image" required accept="image/*"/></td>
+      <td width="20%">&nbsp;</td>
+    </tr>
     <tr>
       <td width="11%">&nbsp;</td>
       <td width="29%">First Name </td>

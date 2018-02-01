@@ -18,7 +18,8 @@
 	  </li>
 	  <li class="hasSub"><a href="#"> View</a>
 		  <ul class="sub-menu">
-		  	<li><a href="viewDrivers.php"><p>View Drivers</p></a></li>
+		  	<li><a href="viewDrivers.php"><p>View Drivers PDF</p></a></li>
+			<li><a href="viewDriversUI.php"><p>View Drivers UI</p></a></li>
 	  <li><a href="viewVehicles.php"><p>View Vehicles PDF</p></a></li>
 	  <li><a href="viewVehiclesUI.php"><p>View Vehicles UI</p></a></li>
      <li> <a href="viewAllbooking.php"><p>View Approved Booking</p></a></li>
@@ -74,7 +75,8 @@
 	  </li>
 	  <li class="hasSub"><a href="#"> View</a>
 		  <ul class="sub-menu">
-		  	<li><a href="viewDrivers.php"><p>View Drivers</p></a></li>
+		  	<li><a href="viewDrivers.php"><p>View Drivers PDF</p></a></li>
+			<li><a href="viewDriversUI.php"><p>View Drivers UI</p></a></li>
 	  <li><a href="viewVehicles.php"><p>View Vehicles PDF</p></a></li>
 	  <li><a href="viewVehiclesUI.php"><p>View Vehicles UI</p></a></li>
      <li> <a href="viewAllbookingTransport.php"><p>View Approved Booking</p></a></li>

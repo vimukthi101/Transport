@@ -1,10 +1,21 @@
 <?php
+if(!isset($_SESSION[''])){
+	session_start();
+}
+$position = $_SESSION['position'];
 include_once('../ssi/db.php');
-session_start();	
+include_once('../ssi/includes-inside-2.php');
+?>
+<body>
+<div>
+<?php
+	include_once('../ssi/navbar.php');
+?>
+</div>
+<body>
+<?php	
 if(isset($_SESSION['email']) && isset($_SESSION['epfno']) && isset($_SESSION['name']) && isset($_SESSION['contactNo'])){
 ?>
-
-<body background="../Images/Vehicles/car.JPG">
 <table width="80%" border="0" align="center">
 <form id="form1" name="form1" method="post" action="Controller/plantVisitController.php" enctype="multipart/form-data">
     <tr>
@@ -233,3 +244,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['epfno']) && isset($_SESSION['na
 	header('Location:login.php');	
 }
 ?>
+</div>
+<div>
+<?php
+		include_once('../ssi/footer.php');
+	?>
+</div>
+</body>

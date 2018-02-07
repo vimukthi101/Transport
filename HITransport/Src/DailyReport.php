@@ -1,8 +1,19 @@
-
-
 <?php
+if(!isset($_SESSION[''])){
+	session_start();
+}
+$position = $_SESSION['position'];
 include_once('../ssi/db.php');
+include_once('../ssi/includes-inside-2.php');
 ?>
+<body>
+<div>
+<?php
+	include_once('../ssi/navbar.php');
+?>
+</div>
+<body>
+<div style="height:500px;">
   <table width="60%" border="0" align="center" cellpadding="5" cellspacing="2">
   <form id="form" name="form" method="post" action="Controller/DailyReportGenerator.php">
 
@@ -98,8 +109,10 @@ include_once('../ssi/db.php');
 
 </form>
   </table>
-
+</div>
+<div>
 <?php
-include_once('../ssi/db.php');
-?>
-  
+		include_once('../ssi/footer.php');
+	?>
+</div>
+</body>

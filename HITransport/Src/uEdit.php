@@ -47,21 +47,21 @@ $position = $_SESSION['position'];
     				<div class="form-date-w3-agileits">
                           <div class="form-agileits"><label>User Name :</label></div>
                           <div class="form-agileits-2">
-                            <input name="Username" pattern="^[a-zA-Z]{1}[a-z]+[.][a-zA-Z]{1}[a-z]+$" title="invalid User name (eg:'John.Doe','john.doe')" type="text" id="Username" required="required" />
+                            <input name="Username" pattern="^[a-zA-Z]{1}[a-z]+[.][a-zA-Z]{1}[a-z]+$" title="invalid User name (eg:'John.Doe','john.doe')" type="text" id="Username" required />
                           </div>
                           <div class="clear"></div>
 					</div>
 					<div class="form-date-w3-agileits second-agile">
 						<div class="form-agileits"><label>Password</label></div>
 						<div class="form-agileits-2">
-                            <input name="Password" type="password" id="Password" value="" required="required" />
+                            <input name="Password" type="password" id="Password" value="" required />
                         </div>
 						<div class="clear"> </div>
 					</div>
 					<div class="form-date-w3-agileits">
 						<div class="form-agileits"><label> Confirm Password</label></div>
 						<div class="form-agileits-2">
-                            <input name="ConfirmPassword" type="password" id="ConfirmPassword" value="" required="required"/>
+                            <input name="ConfirmPassword" type="password" id="ConfirmPassword" value="" required/>
                          </div>
 						<div class="clear"> </div>
 					</div>
@@ -114,7 +114,7 @@ $position = $_SESSION['position'];
 					<div class="form-date-w3-agileits">
 						<div class="form-agileits"><label>EPF No :</label></div>
 						<div class="form-agileits-2">
-      						<input name="Epfno" type="number" id="EpfNo"  value="" required="required"/>
+      						<input name="Epfno" type="number" id="EpfNo"  value="" required/>
                         </div>	
 						<div class="clear"></div>						
 					</div>
@@ -128,7 +128,7 @@ $position = $_SESSION['position'];
 					<div class="form-date-w3-agileits">
 						<div class="form-agileits"><label>Email</label></div>
 						<div class="form-agileits-2">
-                            	<input name="Email" type="email" id="Email" value="" required="required" />
+                            	<input name="Email" type="email" id="Email" value="" required />
                          </div>
 						<div class="clear"> </div>
 					</div>

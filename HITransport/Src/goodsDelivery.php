@@ -1,6 +1,19 @@
 <?php
+if(!isset($_SESSION[''])){
+	session_start();
+}
+$position = $_SESSION['position'];
 include_once('../ssi/db.php');
-session_start();	
+include_once('../ssi/includes-inside-2.php');
+?>
+<body>
+<div>
+<?php
+	include_once('../ssi/navbar.php');
+?>
+</div>
+<body>
+<?php	
 if(isset($_SESSION['email']) && isset($_SESSION['epfno']) && isset($_SESSION['name']) && isset($_SESSION['contactNo'])){
 ?>
 
@@ -229,3 +242,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['epfno']) && isset($_SESSION['na
 	header('Location:login.php');	
 }
 ?>
+</div>
+<div>
+<?php
+		include_once('../ssi/footer.php');
+	?>
+</div>
+</body>

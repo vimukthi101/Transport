@@ -3,13 +3,17 @@ if(!isset($_SESSION[''])){
 	session_start();
 }
 $position = $_SESSION['position'];
-?>
-<?php
 include_once('../ssi/db.php');
-session_start();	
-if(isset($_SESSION['email']) && isset($_SESSION['epfno']) && isset($_SESSION['name']) && isset($_SESSION['contactNo'])){
+include_once('../ssi/includes-inside-2.php');
 ?>
-<body background="../Images/Vehicles/complain.jpg">
+<body>
+<div>
+<?php
+	include_once('../ssi/navbar.php');
+?>
+</div>
+<body>
+<div style="height:500px;">
 <table width="80%" border="0" align="center">
 <form id="form1" name="form1" method="post" action="Controller/feedbackController.php" enctype="multipart/form-data">
     <tr>
@@ -168,8 +172,10 @@ if(isset($_SESSION['email']) && isset($_SESSION['epfno']) && isset($_SESSION['na
 		  echo 'complain submitted. compain ID : ' .$massege;
 	  }
 	  ?>
+</div>
+<div>
 <?php
-} else {
-	header('Location:login.php');	
-}
-?>
+		include_once('../ssi/footer.php');
+	?>
+</div>
+</body>

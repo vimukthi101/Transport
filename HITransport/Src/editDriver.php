@@ -2,7 +2,18 @@
 if(!isset($_SESSION[''])){
 	session_start();
 }
+$position = $_SESSION['position'];
 include_once('../ssi/db.php');
+include_once('../ssi/includes-inside-2.php');
+?>
+<body>
+<div>
+<?php
+	include_once('../ssi/navbar.php');
+?>
+</div>
+<div style="height:500px;">
+<?php
 echo '<div class="header">
 Driver Details
 </div>
@@ -59,3 +70,10 @@ if(mysqli_num_rows($result)!=0){
 		  }
 ?>	
 </table>
+</div>
+<div>
+<?php
+		include_once('../ssi/footer.php');
+	?>
+</div>
+</body>

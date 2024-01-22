@@ -7,9 +7,9 @@ $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 //change following to admin@gmail.com or scat@gmail.com
-$mail->Username = "darshana.devinda@gmail.com";
-$mail->Password = "damayantha123";
-$mail->setFrom('darshana.devinda@gmail.com', 'HIKH TRANSPORT MANAGEMENT SYSTEM');
+$mail->Username = "";
+$mail->Password = "";
+$mail->setFrom('', 'HIKH TRANSPORT MANAGEMENT SYSTEM');
 
 
 $mail->SMTPOptions = array(
